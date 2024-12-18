@@ -5,6 +5,8 @@ void main() {
 }
 
 class SmartCropsApp extends StatelessWidget {
+  const SmartCropsApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -15,13 +17,15 @@ class SmartCropsApp extends StatelessWidget {
 }
 
 class SmartCropsHomePage extends StatelessWidget {
+  const SmartCropsHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: Column(
+        title: const Column(
           children: [
             Icon(Icons.home, size: 40, color: Colors.red),
             Text(
@@ -65,24 +69,24 @@ class SmartCropsHomePage extends StatelessWidget {
               children: [
                 TextButton(
                   onPressed: () {},
+                  style: TextButton.styleFrom(
+                    foregroundColor: Colors.purple,
+                  ),
                   child: Text('Home'),
-                  style: TextButton.styleFrom(
-                    foregroundColor: Colors.purple,
-                  ),
                 ),
                 TextButton(
                   onPressed: () {},
+                  style: TextButton.styleFrom(
+                    foregroundColor: Colors.purple,
+                  ),
                   child: Text('Map'),
-                  style: TextButton.styleFrom(
-                    foregroundColor: Colors.purple,
-                  ),
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: Text('Account'),
                   style: TextButton.styleFrom(
                     foregroundColor: Colors.purple,
                   ),
+                  child: Text('Account'),
                 ),
               ],
             ),
@@ -111,10 +115,10 @@ class SmartCropsHomePage extends StatelessWidget {
             size: 40,
             color: color,
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           Text(
             label,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 16,
               color: Colors.black,
             ),
